@@ -55,6 +55,11 @@
 			<version>2.9.2</version>
 		</dependency>
 		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>5.3.6.Final</version>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<exclusions>
@@ -70,9 +75,9 @@
 			<version>2.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.4-1203-jdbc42</version>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>9.4-1201-jdbc4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
