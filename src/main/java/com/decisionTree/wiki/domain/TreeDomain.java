@@ -8,14 +8,12 @@ package com.decisionTree.wiki.domain;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @NoArgsConstructor
 @Entity
+@Table(name="tree", schema = "treeName")
 @ToString
 public class TreeDomain {
 
