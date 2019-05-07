@@ -13,14 +13,14 @@ import javax.persistence.*;
 
 
 @NoArgsConstructor
-@Entity
+@Entity (name="tree")
 @Table(name="tree", schema = "")
 @ToString
 public class TreeDomain {
 
     @Id
     @JsonIgnore
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTree;
 
     private int root;
