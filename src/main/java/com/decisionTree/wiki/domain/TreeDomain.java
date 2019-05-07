@@ -13,7 +13,7 @@ import javax.persistence.*;
 
 @NoArgsConstructor
 @Entity
-@Table(name="tree", schema = "treeName")
+@Table(name="tree", schema = "")
 @ToString
 public class TreeDomain {
 
