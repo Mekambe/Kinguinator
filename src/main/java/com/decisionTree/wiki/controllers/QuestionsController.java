@@ -91,6 +91,11 @@ public class QuestionsController {
         return questionGroupRepository.findAll();
     }
 
+    @GetMapping("/tree/findTree")
+    public List<TreeDomain> returnTree () {
+        return treeRepository.findAll();
+    }
+
     @GetMapping ("/questionGroup/returnOne")
     public QuestionGroupDomain returnOneQuestionGroup (@PathParam("id") int id){
         QuestionGroupDomain byIdQuestionGroup = questionGroupRepository.findByIdQuestionGroup(id);
@@ -311,6 +316,8 @@ public class QuestionsController {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(Math.toIntExact(save.getIdTree()));
     }
+
+
 
 
 
