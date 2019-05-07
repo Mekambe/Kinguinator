@@ -5,6 +5,7 @@
 
 package com.decisionTree.wiki.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -18,6 +19,7 @@ import javax.persistence.*;
 public class TreeDomain {
 
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTree;
 
