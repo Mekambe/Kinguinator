@@ -297,6 +297,21 @@ public class QuestionsController {
 
     }
 
+    @PostMapping ("tree")
+    public ResponseEntity<Integer> addTree (@RequestParam(value = "id") int id,@RequestParam(value="root") int root, @RequestParam(value="left") int left, @RequestParam(value="right") int right ){
+
+        TreeDomain treeDomain = new TreeDomain();
+        treeDomain.setIdTree(id);
+        treeDomain.setLeft(left);
+        treeDomain.setRight(right);
+        treeDomain.setRoot(root);
+
+        TreeDomain save = treeRepository.save(treeDomain);
+
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(Math.toIntExact(save.getIdTree()));
+    }
+
 
 
     @PostMapping("/questions/addQuestionOrUpdate")
