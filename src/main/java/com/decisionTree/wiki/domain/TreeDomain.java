@@ -20,7 +20,7 @@ public class TreeDomain {
 
     @Id
     @JsonIgnore
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private int idTree;
 
     private int root;
