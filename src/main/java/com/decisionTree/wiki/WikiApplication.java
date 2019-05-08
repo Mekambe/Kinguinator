@@ -27,17 +27,17 @@ public class WikiApplication {
 
 	}
 
-//	@Bean
-//	public WebMvcConfigurer corsConfigurer() {
-//		return new WebMvcConfigurerAdapter() {
-//			@Override
-//			public void addCorsMappings(CorsRegistry registry) {
-//				registry.addMapping("/**").allowedOrigins("file:///C:/Users/j.misiorny/Desktop/Kinguinator/Front/Wersja%203/Kinguinator/dashboard.html")
-//						.allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
-//
-//				;
-//			}
-//		};
-//	}
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurerAdapter() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("https://kinguinatorfrontsupertest.herokuapp.com/index.html")
+						.allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
+
+				;
+			}
+		};
+	}
 
 }
