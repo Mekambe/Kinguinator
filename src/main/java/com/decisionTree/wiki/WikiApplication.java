@@ -32,7 +32,7 @@ public class WikiApplication {
 		return new WebMvcConfigurerAdapter() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://kinguinatorfrontsupertest.herokuapp.com/index.html")
+				registry.addMapping("/**").allowedOrigins("https://kinguinatorfrontsupertest.herokuapp.com")
 						.allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
 
 				;
