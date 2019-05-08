@@ -14,19 +14,17 @@ import javax.persistence.*;
 
 @NoArgsConstructor
 @Entity
-@Table(name="TreeDomain", schema = "")
 @ToString
 public class TreeDomain {
 
     @Id
-    @Column(name="ID", nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTree;
-    @Column (name="root", nullable = false, updatable = false)
+
     private int root;
-    @Column (name="left", nullable = false, updatable = false)
+
     private int left;
-    @Column (name="right", nullable = false, updatable = false)
+
     private int right;
 
     public int getIdTree() {
