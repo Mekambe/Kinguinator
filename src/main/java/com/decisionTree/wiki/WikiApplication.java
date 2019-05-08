@@ -27,17 +27,17 @@ public class WikiApplication {
 
 	}
 
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurerAdapter() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://kinguinatorfrontsupertest.herokuapp.com")
-						.allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
-
-				;
-			}
-		};
-	}
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurerAdapter() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/**").allowedOrigins("https://kinguinatorfrontsupertest.herokuapp.com")
+//						.allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
+//
+//				;
+//			}
+//		};
+//	}
 
 }
