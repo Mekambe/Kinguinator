@@ -23,9 +23,9 @@ public class TreeDomain {
 
     private int root;
 
-    private int left;
+    private int lefty;
 
-    private int right;
+    private int righty;
 
     public int getIdTree() {
         return idTree;
@@ -44,18 +44,18 @@ public class TreeDomain {
     }
 
     public int getLeft() {
-        return left;
+        return lefty;
     }
 
     public void setLeft(int left) {
-        this.left = left;
+        this.lefty = left;
     }
 
     public int getRight() {
-        return right;
+        return righty;
     }
 
     public void setRight(int right) {
-        this.right = right;
+        this.righty = right;
     }
 }
