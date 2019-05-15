@@ -103,7 +103,7 @@ public class TreeLogicServiceImpl implements TreeLogicService {
         return questionDto;
     }
 
-    public QuestionDto mappingTheQuestionsForTheTreeAlgorythm (int questionId,int questionGroupId ) throws IdNotFound {
+        public QuestionDto mappingTheQuestionsForTheTreeAlgorythm (Integer questionId,Integer questionGroupId ) throws IdNotFound {
 
         Optional <QuestionsDomain> byNumberAndQuestionHandler_idQuestionGroup = Optional.ofNullable(questionsDomainRepository.findByNumberAndQuestionHandler_IdQuestionGroup(questionId, questionGroupId));
 
@@ -117,8 +117,8 @@ public class TreeLogicServiceImpl implements TreeLogicService {
         questionDto.setIdQuestions(byNumberAndQuestionHandler_idQuestionGroup.get().getIdQuestions());
         questionDto.setLink(byNumberAndQuestionHandler_idQuestionGroup.get().getLink());
         questionDto.setRoot(treeRootNumber.get().getRoot());
-        questionDto.setRight(treeRootNumber.get().getRight());
-        questionDto.setLeft(treeRootNumber.get().getLeft());
+        questionDto.setRight(treeRootNumber.get().getRighty());
+        questionDto.setLeft(treeRootNumber.get().getLefty());
 
         return questionDto;
 
@@ -141,8 +141,8 @@ public class TreeLogicServiceImpl implements TreeLogicService {
         questionDtoWithTheMatcher.setIdQuestions(byNumberAndQuestionHandler_idQuestionGroup.get().getIdQuestions());
         questionDtoWithTheMatcher.setLink(byNumberAndQuestionHandler_idQuestionGroup.get().getLink());
         questionDtoWithTheMatcher.setRoot(treeRootNumber.get().getRoot());
-        questionDtoWithTheMatcher.setRight(treeRootNumber.get().getRight());
-        questionDtoWithTheMatcher.setLeft(treeRootNumber.get().getLeft());
+        questionDtoWithTheMatcher.setRight(treeRootNumber.get().getRighty());
+        questionDtoWithTheMatcher.setLeft(treeRootNumber.get().getLefty());
         questionDtoWithTheMatcher.setMatcher(matcher);
 
 

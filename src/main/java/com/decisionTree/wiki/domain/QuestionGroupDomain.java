@@ -15,7 +15,7 @@ public class QuestionGroupDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idQuestionGroup;
+    private Integer idQuestionGroup;
 
 
     @OneToMany (mappedBy = "questionHandler")
@@ -50,11 +50,11 @@ public class QuestionGroupDomain {
         this.name = name;
     }
 
-    public int getIdQuestionGroup() {
+    public Integer getIdQuestionGroup() {
         return idQuestionGroup;
     }
 
-    public void setIdQuestionGroup(int idQuestionGroup) {
+    public void setIdQuestionGroup(Integer idQuestionGroup) {
         this.idQuestionGroup = idQuestionGroup;
     }
 

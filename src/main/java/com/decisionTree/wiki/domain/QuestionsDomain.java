@@ -16,7 +16,7 @@ public class QuestionsDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idQuestions;
+    private Integer idQuestions;
 
     @JsonIgnore
     @ManyToOne(cascade=CascadeType.ALL)
@@ -30,7 +30,7 @@ public class QuestionsDomain {
 
     private String link;
 
-    private int number;
+    private Integer number;
 
     public String getLink() {
         return link;
@@ -42,11 +42,11 @@ public class QuestionsDomain {
 
     private String question;
 
-    public int getIdQuestions() {
+    public Integer getIdQuestions() {
         return idQuestions;
     }
 
-    public void setIdQuestions(int idQuestions) {
+    public void setIdQuestions(Integer idQuestions) {
         this.idQuestions = idQuestions;
     }
 
@@ -66,11 +66,11 @@ public class QuestionsDomain {
         this.image = image;
     }
 
-    public int getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 

@@ -10,13 +10,13 @@ import java.util.List;
 @Repository
 public interface QuestionsDomainRepository extends JpaRepository<QuestionsDomain, Integer> {
 
-    QuestionsDomain findByNumber (int number);
-    QuestionsDomain findByNumberAndQuestionHandler(int number, QuestionGroupDomain questionHandler);
-    QuestionsDomain findByNumberAndQuestionHandler_IdQuestionGroup (int number, int idNumber);
-    QuestionsDomain findByQuestionHandler (int number);
+    QuestionsDomain findByNumber (Integer number);
+    QuestionsDomain findByNumberAndQuestionHandler(Integer number, QuestionGroupDomain questionHandler);
+    QuestionsDomain findByNumberAndQuestionHandler_IdQuestionGroup (Integer number, Integer idNumber);
+    QuestionsDomain findByQuestionHandler (Integer number);
     QuestionsDomain findByImage (String image);
-    QuestionsDomain findByIdQuestions (int id);
-    QuestionsDomain findByIdQuestionsAndQuestionHandler (int number,QuestionGroupDomain questionHandler );
+    QuestionsDomain findByIdQuestions (Integer id);
+    QuestionsDomain findByIdQuestionsAndQuestionHandler (Integer number,QuestionGroupDomain questionHandler );
 
 
 

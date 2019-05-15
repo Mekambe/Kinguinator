@@ -19,43 +19,43 @@ public class TreeDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idTree;
+    private Integer idTree;
 
-    private int root;
+    private Integer root;
 
-    private int lefty;
+    private Integer lefty;
 
-    private int righty;
+    private Integer righty;
 
-    public int getIdTree() {
+    public Integer getIdTree() {
         return idTree;
     }
 
-    public void setIdTree(int idTree) {
+    public void setIdTree(Integer idTree) {
         this.idTree = idTree;
     }
 
-    public int getRoot() {
+    public Integer getRoot() {
         return root;
     }
 
-    public void setRoot(int root) {
+    public void setRoot(Integer root) {
         this.root = root;
     }
 
-    public int getLeft() {
+    public Integer getLefty() {
         return lefty;
     }
 
-    public void setLeft(int left) {
-        this.lefty = left;
+    public void setLefty(Integer lefty) {
+        this.lefty = lefty;
     }
 
-    public int getRight() {
+    public Integer getRighty() {
         return righty;
     }
 
-    public void setRight(int right) {
-        this.righty = right;
+    public void setRighty(Integer righty) {
+        this.righty = righty;
     }
 }

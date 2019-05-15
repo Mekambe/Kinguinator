@@ -3,20 +3,52 @@ package com.decisionTree.wiki.dto;
 
 public class QuestionDto {
 
-int root;
-int left;
-int right;
+  Integer root;
+    Integer left;
+    Integer right;
 String question;
-int groupId;
+    Integer groupId;
 String link;
-int idQuestions;
+    Integer idQuestions;
 
-    public int getIdQuestions() {
-        return idQuestions;
+    public Integer getRoot() {
+        return root;
     }
 
-    public void setIdQuestions(int idQuestions) {
-        this.idQuestions = idQuestions;
+    public void setRoot(Integer root) {
+        this.root = root;
+    }
+
+    public Integer getLeft() {
+        return left;
+    }
+
+    public void setLeft(Integer left) {
+        this.left = left;
+    }
+
+    public Integer getRight() {
+        return right;
+    }
+
+    public void setRight(Integer right) {
+        this.right = right;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
     }
 
     public String getLink() {
@@ -27,43 +59,11 @@ int idQuestions;
         this.link = link;
     }
 
-    public int getGroupId() {
-        return groupId;
+    public Integer getIdQuestions() {
+        return idQuestions;
     }
 
-    public void setGroupId(int groupId) {
-        this.groupId = groupId;
-    }
-
-    public int getRoot() {
-        return root;
-    }
-
-    public void setRoot(int root) {
-        this.root = root;
-    }
-
-    public int getLeft() {
-        return left;
-    }
-
-    public void setLeft(int left) {
-        this.left = left;
-    }
-
-    public int getRight() {
-        return right;
-    }
-
-    public void setRight(int right) {
-        this.right = right;
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
+    public void setIdQuestions(Integer idQuestions) {
+        this.idQuestions = idQuestions;
     }
 }

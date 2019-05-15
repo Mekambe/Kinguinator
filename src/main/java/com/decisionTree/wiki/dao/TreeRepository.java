@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TreeRepository extends JpaRepository<TreeDomain, Integer> {
 
-    TreeDomain findByRoot (int root );
+    TreeDomain findByRoot (Integer root );
 
 
 

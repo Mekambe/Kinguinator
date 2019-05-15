@@ -303,12 +303,12 @@ public class QuestionsController {
     }
 
     @PostMapping ("tree")
-    public ResponseEntity<Integer> addTree (@RequestParam(value = "id") int id,@RequestParam(value="root") int root, @RequestParam(value="left") int left, @RequestParam(value="right") int right ){
+    public ResponseEntity<Integer> addTree (@RequestParam(value = "id") Integer id,@RequestParam(value="root") Integer root, @RequestParam(value="left") Integer left, @RequestParam(value="right") Integer right ){
 
         TreeDomain treeDomain = new TreeDomain();
         treeDomain.setIdTree(id);
-        treeDomain.setLeft(left);
-        treeDomain.setRight(right);
+        treeDomain.setLefty(left);
+        treeDomain.setRighty(right);
         treeDomain.setRoot(root);
 
         TreeDomain save = treeRepository.save(treeDomain);
@@ -466,8 +466,8 @@ public class QuestionsController {
 
         }
       Optional <TreeDomain> byRoot = Optional.ofNullable(treeRepository.findByRoot(firstQuestion.getNumber()));
-        questionDto.setLeft(byRoot.get().getLeft());
-        questionDto.setRight(byRoot.get().getRight());
+        questionDto.setLeft(byRoot.get().getLefty());
+        questionDto.setRight(byRoot.get().getRighty());
         questionDto.setRoot(byRoot.get().getRoot());
         questionDto.setGroupId(firstQuestion.getQuestionHandler().getIdQuestionGroup());
         questionDto.setQuestion(firstQuestion.getQuestion());
@@ -477,7 +477,7 @@ public class QuestionsController {
     }
 
     @GetMapping ("nextRandomQuestion")
-    public QuestionDto returnNextRandomQuestion (@RequestParam(value="domainNumber") int questionDomainNumber, @RequestParam(value="questionGroupId") int questionGroupId) throws IdNotFound {
+    public QuestionDto returnNextRandomQuestion (@RequestParam(value="domainNumber") Integer questionDomainNumber, @RequestParam(value="questionGroupId") Integer questionGroupId) throws IdNotFound {
 //        Optional <QuestionsDomain> byNumberAndQuestionHandler_idQuestionGroup = Optional.ofNullable(questionsDomainRepository.findByNumberAndQuestionHandler_IdQuestionGroup(questionDomainNumber, questionGroupId));
 //
 //        Optional <TreeDomain> treeRootNumber = Optional.ofNullable(treeRepository.findByRoot(questionDomainNumber));
