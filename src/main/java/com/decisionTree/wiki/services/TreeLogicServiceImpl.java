@@ -171,13 +171,13 @@ public class TreeLogicServiceImpl implements TreeLogicService {
     }
 
 
-    public int returnTheNextQuestionNumberInsideTheTree (int tree){
+    public Integer returnTheNextQuestionNumberInsideTheTree (Integer tree){
 
         QuestionGroupDomain byIdQuestionGroup = questionGroupRepository.findByIdQuestionGroup(tree);
         List<QuestionsDomain> groupId = byIdQuestionGroup.getGroupId();
         List<Integer> listofQuestionNumbers = new ArrayList<>();
         for (QuestionsDomain listofNumbers : groupId){
-            int number = listofNumbers.getNumber();
+            Integer number = listofNumbers.getNumber();
             listofQuestionNumbers.add(number);
         }
 
