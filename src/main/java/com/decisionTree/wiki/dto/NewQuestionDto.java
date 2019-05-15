@@ -9,8 +9,8 @@ public class NewQuestionDto {
 
 
     String question;
-    int number;
-    int  questionHandler;
+    Integer number;
+    Integer  questionHandler;
     String link;
 
     public String getLink() {
@@ -29,19 +29,19 @@ public class NewQuestionDto {
         this.question = question;
     }
 
-    public int getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 
-    public int getQuestionHandler() {
+    public Integer getQuestionHandler() {
         return questionHandler;
     }
 
-    public void setQuestionHandler(int questionHandler) {
+    public void setQuestionHandler(Integer questionHandler) {
         this.questionHandler = questionHandler;
     }
 
