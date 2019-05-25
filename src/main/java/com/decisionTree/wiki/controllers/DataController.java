@@ -21,10 +21,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
+import java.util.*;
 
 @RestController
 public class DataController {
@@ -114,7 +111,8 @@ public class DataController {
         QuestionGroupDomain byIdQuestionGroup = questionGroupRepository.findByIdQuestionGroup(theRightTree);
         List<QuestionsDomain> groupId1 = byIdQuestionGroup.getGroupId();
 
-        Optional<QuestionsDomain> first = groupId1.stream().findFirst();
+        Optional<QuestionsDomain> first = groupId1.stream().min(Comparator.comparing(QuestionsDomain::getIdQuestions));
+//        findFirst();
         int idQuestions = first.get().getNumber();
 
 
