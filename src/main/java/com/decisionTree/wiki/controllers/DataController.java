@@ -113,7 +113,7 @@ public class DataController {
 
         Optional<QuestionsDomain> first = groupId1.stream().min(Comparator.comparing(QuestionsDomain::getIdQuestions));
 //        findFirst();
-        int idQuestions = first.get().getNumber();
+        int idQuestions = first.get().getIdQuestions();
 
 
 //        tree.add(first.get());
