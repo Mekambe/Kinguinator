@@ -111,9 +111,9 @@ public class DataController {
         QuestionGroupDomain byIdQuestionGroup = questionGroupRepository.findByIdQuestionGroup(theRightTree);
         List<QuestionsDomain> groupId1 = byIdQuestionGroup.getGroupId();
 
-        Optional<QuestionsDomain> first = groupId1.stream().min(Comparator.comparing(QuestionsDomain::getIdQuestions));
+        Optional<QuestionsDomain> first = groupId1.stream().min(Comparator.comparing(QuestionsDomain::getNumber));
 //        findFirst();
-        int idQuestions = first.get().getIdQuestions();
+        int idQuestions = first.get().getNumber();
 
 
 //        tree.add(first.get());
